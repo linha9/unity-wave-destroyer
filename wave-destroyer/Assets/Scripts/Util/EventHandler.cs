@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 public enum EventType
 {
-    EnemyDeath, WaveComplete
+    EnemyDeath, WaveComplete, DialogOff
 }
 
 public class EventHandler : MonoBehaviour
@@ -19,6 +19,7 @@ public class EventHandler : MonoBehaviour
         {
             Instance = this;
             eventRegistry = new Dictionary<EventType, UnityEvent>();
+            DontDestroyOnLoad(this);
         }
         else
         {

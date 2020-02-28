@@ -70,15 +70,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnJumpPerformed()
     {
-        anim.SetBool("Jump", true);
+        //anim.SetBool("Jump", true);
     }
 
     private void OnGround()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+        /*if (anim.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
         {
             anim.SetBool("Jump", false);
-        }
+        }*/
     }
 
     private void HandleSit()
@@ -94,20 +94,20 @@ public class PlayerMovement : MonoBehaviour
             {
                 isSit = true;
                 xMover.Stop();
-                anim.Play("Sit");
+                //anim.Play("Sit");
             }
         }
     }
 
     private void HandleAttack() {
-        if (Input.GetKey(KeyCode.Mouse0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        /*if (Input.GetKey(KeyCode.Mouse0) && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             anim.SetTrigger("Attack");
         }
         else
         {
             anim.ResetTrigger("Attack");
-        }
+        }*/
     }
 
     private void HandleFlip()

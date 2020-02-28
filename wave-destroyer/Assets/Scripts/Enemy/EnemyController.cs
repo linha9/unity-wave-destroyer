@@ -94,7 +94,7 @@ public class EnemyController : MonoBehaviour
         {
             rb2d.velocity = new Vector2(direction * speed * Time.deltaTime, rb2d.velocity.y);
         }
-        
+
     }
 
     private void detectWallHit()

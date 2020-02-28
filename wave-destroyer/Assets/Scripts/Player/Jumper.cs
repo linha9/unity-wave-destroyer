@@ -38,11 +38,11 @@ public class Jumper
             {
                 remainingJumps = maxSequentJumps;
             }
-            
             onGround.Invoke();
         }
 
-        if (Input.GetButtonDown("Jump") && remainingJumps > 0) { 
+
+        if (Input.GetButtonDown("Jump") && remainingJumps > 0) {
             remainingJumps -= 1;
             isJumping = true;
             onJumpPerformed.Invoke();

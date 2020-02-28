@@ -21,7 +21,7 @@ public class WaveController : MonoBehaviour
         waves = new List<Wave>(GetComponentsInChildren<Wave>());
         nextWaveTimer = new CountdownTimer(timeBetweenWaves);
         currentWave = waves[waveNum - 1];
-        waveText.text = "Wave " + waveNum;
+        //waveText.text = "Wave " + waveNum;
     }
 
     private void Start()
@@ -39,7 +39,7 @@ public class WaveController : MonoBehaviour
     {
         while (!nextWaveTimer.Count())
         {
-            waveText.text = "Next wave in " + Mathf.Ceil(nextWaveTimer.Countdown);
+            //waveText.text = "Next wave in " + Mathf.Ceil(nextWaveTimer.Countdown);
             yield return null;
         }
 
@@ -57,7 +57,7 @@ public class WaveController : MonoBehaviour
             waveNum++;
             currentWave = waves[waveNum - 1];
             nextWaveTimer.Reset();
-            waveText.text = "Wave " + waveNum;
+            //waveText.text = "Wave " + waveNum;
             currentWave.StartWave();
         }
     }

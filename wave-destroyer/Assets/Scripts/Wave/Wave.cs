@@ -25,7 +25,7 @@ public class Wave : MonoBehaviour
     {
         if (!IsWaveComplete)
         {
-            mobsAliveText.text = tMobsAmount.ToString();
+            //mobsAliveText.text = tMobsAmount.ToString();
             MobsAlive = tMobsAmount;
             EventHandler.Instance.AddListener(EventType.EnemyDeath, OnMobDeath);
             spawnTimer = new CountdownTimer(spawnDelay);
